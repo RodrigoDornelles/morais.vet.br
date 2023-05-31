@@ -1,0 +1,27 @@
+name: "deploy"
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+        
+      - name: Build project
+        run: > 
+          mkdir -p public &&
+          sed s/SEUNUMERODOTELEFONE/${{ secrets.SEUNUMERODOTELEFONE }}/g
+          www/index.html > public/index.html
+
+      - name: Deploy project
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: morais-vet
+          directory: public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
