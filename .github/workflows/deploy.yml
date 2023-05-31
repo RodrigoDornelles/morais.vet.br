@@ -24,4 +24,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: morais-vet-br
           directory: public
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          #gitHubToken: ${{ secrets.GITHUB_TOKEN }}
