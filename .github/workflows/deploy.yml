@@ -13,7 +13,7 @@ jobs:
         
       - name: Build project
         run: > 
-          mkdir -p public &&
+          cp -r www public &&
           sed s/SEUNUMERODOTELEFONE/${{ secrets.SEUNUMERODOTELEFONE }}/g
           www/index.html > public/index.html
 
