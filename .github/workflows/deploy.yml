@@ -13,9 +13,12 @@ jobs:
         
       - name: Build project
         run: > 
-          cp -r www public &&
-          sed s/SEUNUMERODOTELEFONE/${{ secrets.SEUNUMERODOTELEFONE }}/g
-          www/index.html > public/index.html
+          set -ex
+          && cp -r www public
+          && cat www/index.html
+          | sed s/SEUNUMERODOTELEFONE/${{ secrets.SEUNUMERODOTELEFONE }}/g
+          | sed s/GA_TRACKING_ID/${{ secrets.GA_TRACKING_ID }}/g
+          > public/index.html
 
       - name: Deploy project
         uses: cloudflare/pages-action@v1
