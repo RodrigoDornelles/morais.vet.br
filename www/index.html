@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Veterinária Domiciliar em Canoas - Atendimento e Exames Laboratoriais</title>
   <meta name="title" content="Veterinária Domiciliar em Canoas - Atendimento e Exames Laboratoriais" />
   <meta name="image" content="https://morais.vet.br/img1.jpeg" />
@@ -19,7 +19,7 @@
   <meta property="twitter:title" content="Veterinária Domiciliar em Canoas - Atendimento e Exames Laboratoriais" />
   <meta property="twitter:description" content="Atendimento veterinário domiciliar em Canoas, RS. Consultas, vacinação, exames laboratoriais e cuidados pós-operatórios no conforto da sua casa. Agende uma consulta agora." />
   <meta property="twitter:image" content="https://morais.vet.br/img1.jpeg" />
-    <meta name="keywords" content="veterinária domiciliar, atendimento veterinário domiciliar, exames laboratoriais, Canoas, RS">
+  <meta name="keywords" content="veterinária domiciliar, atendimento veterinário domiciliar, exames laboratoriais, Canoas, RS">
   <style>
     *, *:after, *:before {
       margin: 0;
@@ -27,43 +27,42 @@
       box-sizing: border-box;
     }
     body, html {
+      color: white;
+      font-size: 3.4vmin;
       height: 100%;
       width: 100%;
       overflow-x: hidden;
       overflow-y: hidden;
       font-family: Arial, sans-serif;
     }
-    img {
-      height: 100vh;
+    section {
+      width: 25vw;
+      background-color: #333;
     }
     main {
       display: flex;
-      justify-content: space-around;
     }
-    section {
-      width: 25vw;
-      display: inline-block;
-      overflow: hidden;
+    img {
+      height: 100vh;
     }
     section:nth-child(2) {
-      padding: 48px;
-      background-color: #333;
-      color: white; 
-      width: 50vw;
+      flex: auto;
+      padding: 4vmax;
+      display: block;
+    }
+    h1 {
+      font-size: 7vmin;
+    }
+    h1, h2 {
+      text-align: center;
+      margin: 2vh;
     }
     hr {
       visibility: hidden;
     }
     p {
+      margin: 2vw 0;
       text-align: justify;
-      margin: 8px 0;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    h1, h2 {
-      text-align: center;
-      margin: 16px;
     }
     a {
       border-radius: 8px;
@@ -71,54 +70,82 @@
       border-style: solid;
       border-color:  white;
       display: block;
-      margin: 32px auto;
+      margin: 8vmin auto;
       text-align: center;
-      color: white;
-      fill: white;
-      font-size: 24px;
-      padding: 16px;
+      color: #333;
+      fill: #333;
+      background-color: white;
+      font-size: 5vmin;
+      padding: 4vh;
       text-decoration: none;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% {
+          box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
+      }
+      50% {
+          box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+      }
+      100% {
+          box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
+      }
     }
     a:hover {
-      fill: #333;
-      color: #333;
-      background-color: white;
+      fill: white;
+      color: white;
+      background-color: #25D366;
     }
     svg {
-      width: 20px;
+      width: 5vmin;
     }
-    @media (max-aspect-ratio: 5.2/3) {
+    @media (max-aspect-ratio: 5.5/3) or ((orientation: landscape) and  (pointer: coarse)) {
+      section:nth-child(1) {
+        width: 50%;
+      }
       h1 {
-        margin: 2px;
-        font-size: 20px;
+        font-size: 4vmin;
       }
       h2 {
-        margin: 2px;
-        font-size: 18px;
+        font-size: 3.5vmin;
       }
       a {
-        margin: 2px;
-      }
-      main {
-        display: block;
-      }
-      img {
-        width: 100%;
-        height: initial;
-      }
-      section, section:nth-child(2) {
-        width: 100vw;
-        height: 30vh;
-        font-size: 88%;
+        font-size: 4vmin;
+        padding: 2vmin;
+        margin: 4vmin auto;
       }
       section:nth-child(2) {
-        padding: 8px 12px;
-        height: 100%;
+        padding: 2vmin;
+      }
+      section:nth-child(3) {
+        display: none;
+      }
+    }
+    @media (max-aspect-ratio: 1/1.1) {  
+      h1, h2{
+        margin: 0px;
+      }
+      main {
+        flex-direction: column;
+      }
+      img {
+        height: initial;
+        width: 100vw;
+      }
+      section {
+        width: 100%;
+      }
+      section:nth-child(1) {
+        max-height: 42svh;
+        width: 100%;
+        overflow: hidden;
+      }
+      section:nth-child(3) {
+        display: block;
+        z-index: -1;
       }
       section:nth-child(3) img {
-        position: relative;
-        bottom: 30vw;
-        z-index: -1;
+        transform: translate(0, -40vw);
       }
     }
   </style>
@@ -136,7 +163,7 @@
       <article>
         <p>Atendimento veterinário domiciliar em Canoas, RS, proporcionando conforto e comodidade para o seu animal de estimação.</p>
         <p>Ofereço uma ampla gama de serviços: consultas, vacinação, vermifugação, exames laboratoriais, cuidados pós-operatórios e muito mais, tudo no conforto da sua casa.</p>
-        <a href="https://wa.me/SEUNUMERODOTELEFONE" class="cta-button">       
+        <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" class="cta-button">       
           Agende uma consulta
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 478.165 478.165" style="enable-background:new 0 0 478.165 478.165;" xml:space="preserve">
@@ -163,5 +190,13 @@
       <img src="img2.jpeg">
     </section>
   </main>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID');
+  </script>
 </body>
 </html>
